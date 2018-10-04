@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>
+      Ionic 2
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="has-header">
+  <ion-list>
+   <ion-item *ngFor="let contact of contactList">
+      <ion-avatar (click)="clickedAvatar(contact.id)"
+         [class]="isInArray(contact.id) ? 'selected' : 'not-selected'"
+            item-left>
+            <img src="https://pickaface.net/assets/images/slides/slide2.png"/> <!-- get image from contact object --> 
+        </ion-avatar>
+        <div [class]="isInArray(contact.id) ? 'highlight' : 'not-selected'">
+        <h2 >{{contact.name}}</h2> <!-- etc -->
+        <h2>{{contact.id}}</h2> <!-- etc -->
+        </div>
+   </ion-item>
+</ion-list> 
+</ion-content>

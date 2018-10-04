@@ -1,0 +1,7 @@
+{
+  "name": "tryThings",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
